@@ -15,7 +15,8 @@ export default function Nav() {
   }
 
   return (
-    <nav className='flex items-center p-4 md:px-8 h-18 justify-between text-sm fixed w-full'>
+    <nav className='flex items-center md:px-8 h-18 justify-center text-sm fixed w-full'>
+        <div className='flex md:w-4/8 w-19/20 justify-between items-center border-b-1 border-accent p-4'>
         <div>
             <Link to='/' className='font-semibold'>Support Tickets</Link>
         </div>
@@ -29,6 +30,7 @@ export default function Nav() {
         <li><Link to='register' className='flex justify-center items-center gap-1 md:gap-2'><FaUser/>Register</Link></li>
         </>)}
             </ul>
+          </div> 
     </nav>
   )
 }
