@@ -1,4 +1,6 @@
-
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@radix-ui/react-label"
 
 export const CreateTickets = () => {
   return (
@@ -6,7 +8,9 @@ export const CreateTickets = () => {
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="text-xl md:text-2xl font-bold">Crie um novo Ticket</h2>
           <p className="text-sidebar-foreground">Preencha os campos abaixo com as informações necessárias.</p>
-          </div>
+        </div>
+
+         
     </section>
   )
 }

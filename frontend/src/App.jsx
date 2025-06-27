@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Nav from "./components/Nav"
 import { CreateTickets } from "./pages/CreateTickets"
+import PrivateRoute from "./components/PrivateRoute"
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path="/new-ticket" element={<CreateTickets/>}/>
+        <Route path="/new-ticket" element={<PrivateRoute/>}>
+        <Route index element={<CreateTickets/>}/>
+        </Route>
       </Routes>
       </div>
       </BrowserRouter>
