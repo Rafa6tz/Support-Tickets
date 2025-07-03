@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import ticketService from "./ticketService";
-import { isErrored } from "stream";
 
 //Get user from localstorage
 const user = JSON.parse(localStorage.getItem('user'))
@@ -132,15 +131,7 @@ export const ticketSlice = createSlice({
                 state.isError = true
                 state.message = action.payload
             })
-            .addCase(getTickets.pending, (state) => {
-                state.isLoading = true
-            })
-            .addCase(getTickets.fulfilled, (state, action) => {
-                state.isLoading = false
-                state.isSuccess = true
-                state.tickets = action.payload
-            })
-            .addCase(closeTicket, (state, action) => {
+            .addCase(closeTicket.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.tickets.map((ticket) => {
                     ticket._id === action.payload._id ? (ticket.status = 'closed') : ticket
