@@ -59,7 +59,7 @@ export default function Login() {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-4 lg:gap-8 w-full">
+      <section className="flex flex-col items-center justify-center gap-4 pt-10 lg:gap-8 w-full">
         <div className="flex items-center justify-center flex-col gap-2">
         <h2 className="flex lg:text-2xl font-bold gap-2 items-center"><FaSignInAlt/>Login</h2>
         <p className="text-sm lg:text-base">Acesse agora mesmo sua conta!</p>

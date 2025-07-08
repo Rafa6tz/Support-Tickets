@@ -6,19 +6,23 @@ import Register from "./pages/Register"
 import Nav from "./components/Nav"
 import { CreateTickets } from "./pages/CreateTickets"
 import PrivateRoute from "./components/PrivateRoute"
+import TicketList from "./pages/TicketList"
 
 function App() {
   return (
     <>
       <BrowserRouter>
       <Nav/>
-      <div className="min-h-screen lg:pt-20 pt-16">
+      <div className="min-h-screen pt-16">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/new-ticket" element={<PrivateRoute/>}>
         <Route index element={<CreateTickets/>}/>
+        </Route>
+        <Route path="/tickets" element={<PrivateRoute/>}>
+        <Route index element={<TicketList/>}/>
         </Route>
       </Routes>
       </div>
