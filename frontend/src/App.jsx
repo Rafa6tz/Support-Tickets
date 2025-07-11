@@ -7,6 +7,7 @@ import Nav from "./components/Nav"
 import { CreateTickets } from "./pages/CreateTickets"
 import PrivateRoute from "./components/PrivateRoute"
 import TicketList from "./pages/TicketList"
+import Ticket from "./pages/Ticket"
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/tickets" element={<PrivateRoute/>}>
         <Route index element={<TicketList/>}/>
+        </Route>
+        <Route path="/tickets/:ticketId" element={<PrivateRoute/>}>
+        <Route index element={<Ticket/>}/>
         </Route>
       </Routes>
       </div>
