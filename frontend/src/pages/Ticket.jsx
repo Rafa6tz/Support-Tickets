@@ -1,3 +1,4 @@
+import BackButtom from '@/components/BackButtom'
 import Spinner from '@/components/Spinner'
 import { getTicket } from '@/features/ticket/ticketSlice'
 import React, { useEffect } from 'react'
@@ -26,7 +27,12 @@ export default function Ticket() {
     }
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4  w-full text-wrap text-center p-6 md:pt-10">
+    <section className="flex flex-col gap-4 w-full text-wrap text-center p-6 md:pt-10">
+        <div className='flex gap-2 md:justify-center items-center text-xs md:text-sm w-full'>
+            <div className='w-1/2 flex justify-start items-start'>
+        <BackButtom url='/tickets'/>
+            </div>
+        </div>
         <div className='h-full flex flex-col items-center justify-center'>
         <div className='flex gap-2 text-xs md:text-sm justify-between w-9/10 md:w-5/10'>
             <h4 className='text-wrap'>Ticket ID: {ticket._id}</h4>

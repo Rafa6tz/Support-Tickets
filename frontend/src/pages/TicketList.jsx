@@ -1,3 +1,4 @@
+import BackButtom from '@/components/BackButtom'
 import TicketItem from '@/components/TicketItem'
 import { reset } from '@/features/ticket/ticketSlice'
 import { getTickets } from '@/features/ticket/ticketSlice'
@@ -28,6 +29,11 @@ export default function TicketList() {
           <h2 className="text-xl md:text-2xl font-bold">Lista de Tickets</h2>
           <p className="text-sidebar-foreground">Veja todos os seus tickets e o status de cada um.</p>
         
+        </div>
+        <div className='flex gap-2 md:justify-center items-center text-xs md:text-sm w-full mb-6'>
+            <div className='w-1/2 flex justify-start items-start'>
+                <BackButtom url='/'/>
+            </div>
         </div>
         <div>
             <div className='grid grid-cols-2 md:grid-cols-4 font-bold items-center justify-center'>

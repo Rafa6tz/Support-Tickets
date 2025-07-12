@@ -15,7 +15,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className='flex items-center md:px-8 h-18 justify-center text-sm fixed w-full'>
+    <nav className='flex items-center md:px-8 h-18 justify-center text-sm fixed w-full bg-white'>
         <div className='flex md:w-4/8 w-19/20 justify-between items-center border-b-1 border-accent p-4'>
         <div>
             <Link to='/' className='font-semibold'>Support Tickets</Link>
