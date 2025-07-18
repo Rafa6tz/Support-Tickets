@@ -15,12 +15,12 @@ export default function Nav() {
   }
 
   return (
-    <nav className='flex items-center md:px-8 h-18 justify-center text-sm fixed w-full bg-white'>
+    <nav className='flex items-center px-2 md:px-8 h-18 justify-center text-sm fixed w-full bg-white'>
         <div className='flex md:w-4/8 w-19/20 justify-between items-center border-b-1 border-accent p-4'>
         <div>
             <Link to='/' className='font-semibold'>Support Tickets</Link>
         </div>
-        <ul className='flex justify-end gap-4 md:gap-8 w-2/5'>
+        <ul className='flex justify-end pr-4 md:pr-0 gap-4 md:gap-8 w-2/5'>
         { user ? (
           <li>
             <a className='flex justify-center items-center gap-1 md:gap-2 cursor-pointer' onClick={onLogout}><FaSignOutAlt/> Logout</a>

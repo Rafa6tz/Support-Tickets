@@ -49,7 +49,7 @@ export default function Ticket() {
   }
 
   return (
-    <section className="flex flex-col gap-4 w-full text-wrap text-center p-6 md:pt-10">
+    <section className="flex flex-col justify-center gap-4 text-wrap text-center p-4 md:pt-10">
         {modal && (
             <>
             <div className='fixed inset-0 bg-input opacity-80 flex items-center justify-center z-50'/>
@@ -88,7 +88,7 @@ export default function Ticket() {
             <p>Título:</p>
             <h2 className='text-xl font-bold'>{ticket.title}</h2>
         </div>
-            <div className='text-sm bg-input border-1 border-border p-4 md:w-full min-h-26 flex flex-col gap-2 justify-center items-center text-wrap rounded-md mt-4'>
+            <div className='text-sm bg-input border-1 border-border p-4 w-full min-h-26 flex flex-col gap-2 justify-center items-center text-wrap rounded-md mt-4'>
             <p className='font-bold'>Descrição do ticket:</p>
             <p >{ticket.description}</p>
             </div>
